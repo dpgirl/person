@@ -1,7 +1,12 @@
 # pos收银系统
 
 > A Vue.js project
-# 
+# 界面
+![pos 界面](https://raw.githubusercontent.com/dpgirl/person/master/index.png)
+
+# 技术栈
+> 前端：vue2 + webpack + vueRouter + element
+
 ## Build Setup
 
 ``` bash
