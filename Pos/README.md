@@ -1,7 +1,7 @@
-# pos
+# pos收银系统
 
 > A Vue.js project
-
+# 
 ## Build Setup
 
 ``` bash
