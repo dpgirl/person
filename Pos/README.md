@@ -1,6 +1,8 @@
 # pos收银系统
 
 > A Vue.js project
+ 
+ [Demo](https://dpgirl.github.io/person/Pos/dist/index.html#/)
 # 界面
 ![pos 界面](https://raw.githubusercontent.com/dpgirl/person/master/index.png)
 
