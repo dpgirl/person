@@ -94,45 +94,151 @@ export default {
   data() {
     return {
       tableData: [],
-      hotFoods: [],
-      hunger: [],
-      snack: [],
-      drink: [],
-      meal: [],
+      hotFoods: [
+        {
+              goodsId:1,
+              goodsName:'香辣鸡腿堡',
+              price:18
+          }, {
+              goodsId:2,
+              goodsName:'田园鸡腿堡',
+              price:15
+          }, {
+              goodsId:3,
+              goodsName:'和风汉堡',
+              price:15
+          }, {
+              goodsId:4,
+              goodsName:'快乐全家桶',
+              price:80
+          }, {
+              goodsId:5,
+              goodsName:'脆皮炸鸡腿',
+              price:10
+          }, {
+              goodsId:6,
+              goodsName:'魔法鸡块',
+              price:20
+          }, {
+              goodsId:7,
+              goodsName:'可乐大杯',
+              price:10
+          }, {
+              goodsId:8,
+              goodsName:'雪顶咖啡',
+              price:18
+          }, {
+              goodsId:9,
+              goodsName:'大块鸡米花',
+              price:15
+          }, {
+              goodsId:20,
+              goodsName:'香脆鸡柳',
+              price:17
+          }
+      ],
+      hunger: [
+         {
+            goodsId: 1,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos001.jpg",
+            goodsName: "香辣鸡腿堡",
+            price: 18
+        },
+        {
+            goodsId: 2,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos002.jpg",
+            goodsName: "田园鸡腿堡",
+            price: 15
+        },
+        {
+            goodsId: 3,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos003.jpg",
+            goodsName: "和风汉堡",
+            price: 15
+        }
+      ],
+      snack: [
+         {
+            goodsId: 4,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos003.jpg",
+            goodsName: "大包薯条",
+            price: 18
+        },
+        {
+            goodsId: 5,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos002.jpg",
+            goodsName: "脆皮炸鸡腿",
+            price: 20
+        },
+        {
+            goodsId: 6,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos001.jpg",
+            goodsName: "魔法鸡块",
+            price: 20
+        }
+      ],
+      drink: [
+         {
+            goodsId: 7,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos001.jpg",
+            goodsName: "可乐大杯",
+            price: 10
+        },
+        {
+            goodsId: 8,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos002.jpg",
+            goodsName: "雪顶咖啡",
+            price: 18
+        }
+      ],
+      meal: [
+         {
+            goodsId: 9,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos004.jpg",
+            goodsName: "儿童欢乐套餐",
+            price: 25
+        },
+        {
+            goodsId: 10,
+            goodsImg: "http://7xjyw1.com1.z0.glb.clouddn.com/pos003.jpg",
+            goodsName: "快乐全家桶",
+            price: 99
+        }
+      ],
       totalMoney: 0,
       totalCount: 0
     };
   },
-  created() {
-    //热销商品
-    axios
-      .get("http://jspang.com/DemoApi/oftenGoods.php")
-      .then(resp => {
-        //成功
-        //  console.log(resp)
-        this.hotFoods = resp.data;
-      })
-      .catch(resp => {
-        //失败
-        alert(resp, "网络失败");
-      });
-    //分类商品
-    axios
-      .get("http://jspang.com/DemoApi/typeGoods.php")
-      .then(resp => {
-        //成功
-        //  console.log(resp)
+  // created() {
+  //   //热销商品
+  //   axios
+  //     .get("http://jspang.com/DemoApi/oftenGoods.php")
+  //     .then(resp => {
+  //       //成功
+  //       //  console.log(resp)
+  //       this.hotFoods = resp.data;
+  //     })
+  //     .catch(resp => {
+  //       //失败
+  //       alert(resp, "网络失败");
+  //     });
+  //   //分类商品
+  //   axios
+  //     .get("http://jspang.com/DemoApi/typeGoods.php")
+  //     .then(resp => {
+  //       //成功
+  //       //  console.log(resp)
 
-        this.hunger = resp.data[0];
-        this.snack = resp.data[1];
-        this.drink = resp.data[2];
-        this.meal = resp.data[3];
-      })
-      .catch(resp => {
-        //失败
-        alert(resp, "网络失败");
-      });
-  },
+  //       this.hunger = resp.data[0];
+  //       this.snack = resp.data[1];
+  //       this.drink = resp.data[2];
+  //       this.meal = resp.data[3];
+  //     })
+  //     .catch(resp => {
+  //       //失败
+  //       alert(resp, "网络失败");
+  //     });
+  // },
   mounted: function() {
     var orderHeigh = document.body.clientHeight;
     document.getElementById("order-list").style.height = orderHeigh + "px";
