@@ -210,7 +210,7 @@ export default {
     };
   },
   // created() {
-  //   //热销商品
+  //   //热销商品 
   //   axios
   //     .get("http://jspang.com/DemoApi/oftenGoods.php")
   //     .then(resp => {
